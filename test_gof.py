@@ -19,6 +19,8 @@ def test_create_board_type_error():
     with pytest.raises(TypeError):
         gof.create_board('a', 'b')
 
-
+def test_create_board_value_error():
+    with pytest.raises(ValueError):
+        gof.create_board(-3, -5)
 
 ##
