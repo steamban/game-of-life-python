@@ -16,7 +16,6 @@ def display_board(game_board):
 
 # TODO
 # initialise it with alive cells at random positions
-# display board
 # keep track of neighbors each cell has, pass coordinates of cell and the board
 # update board
 # def update_board(board):
