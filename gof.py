@@ -1,5 +1,5 @@
 import random
-
+import time
 
 # create a board and initialize with random 1s and 0s
 def create_board(rows, cols):
@@ -58,9 +58,6 @@ if __name__ == "__main__":
     print(display_board(board))
     
     while True:
-        updated_board = update_board(board)
-        print(display_board(updated_board))
-        
-        
-        
-        
+        board = update_board(board)
+        print(display_board(board))
+        time.sleep(0.8)
