@@ -46,8 +46,12 @@ def test_count_live_neighbors_none_alive():
 
 # Tests for update_board()
 
-def test_update_board_generation_update():
+def test_update_board_alive_to_dead():
     board = [[1, 0, 1], [0, 0, 1], [1, 0, 0]]
     assert gof.update_board(board) == [[0, 1, 0], [0, 0, 0], [0, 0, 0]]
+
+def test_update_board_dead_to_alive():
+    board = [[1, 0, 1], [1, 0, 0], [1, 1, 1]]
+    assert gof.update_board(board) == [[0, 1, 0], [1, 0, 1], [1, 1, 0]]
     
 ##
