@@ -4,7 +4,14 @@ def create_board(rows, cols):
 
 
 # display board
-
+def display_board(game_board):
+    board = ""
+    for i in range(len(game_board)):
+        for j in range(len(game_board[0])):
+            board += f"{game_board[i][j]} "
+        board += "\n"
+    
+    return board
 
 
 # TODO
