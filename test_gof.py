@@ -27,8 +27,11 @@ def test_create_board_type_error():
 
 # Tests for display_board
 
-def test_display_board_normal_input():
+def test_display_board_empty_board():
     board = gof.create_board(2, 4)
     assert gof.display_board(board) == """0 0 0 0 
 0 0 0 0 
 """
+
+##
+
