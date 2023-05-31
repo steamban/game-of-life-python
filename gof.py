@@ -27,3 +27,10 @@ def create_board(rows, cols):
 #                 else:
 #                     updated_board[i][j] = 0
 #     return updated_board
+
+if __name__ == "__main__":
+    # initialise board
+    rows = 5
+    cols = 5
+    board = create_board(rows, cols)
+    
