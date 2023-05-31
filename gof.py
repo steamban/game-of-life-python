@@ -57,5 +57,10 @@ if __name__ == "__main__":
     board = create_board(rows, cols)
     print(display_board(board))
     
-    # while True:
+    while True:
+        updated_board = update_board(board)
+        print(display_board(updated_board))
+        
+        
+        
         
