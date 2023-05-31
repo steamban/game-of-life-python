@@ -1,8 +1,11 @@
-
-
 # create a board
 def create_board(rows, cols):
-    return [[0 for _ in range (cols)] for _ in range (rows)]
+    return [[0 for _ in range(cols)] for _ in range(rows)]
+
+
+# display board
+
+
 
 # TODO
 # initialise it with alive cells at random positions
@@ -30,7 +33,7 @@ def create_board(rows, cols):
 
 if __name__ == "__main__":
     # initialise board
-    rows = 5
+    rows = 4
     cols = 5
     board = create_board(rows, cols)
-    
+    display_board(board)
