@@ -37,21 +37,35 @@ def test_display_board_empty_board():
 def test_count_live_neighbors_two_alive():
     board = [[0, 1, 0], [1, 0, 0], [1, 0, 0]]
     assert gof.count_live_neighbors(board, 1, 0) == 2
-    
+
 def test_count_live_neighbors_none_alive():
     board = [[0, 1, 0], [1, 0, 0], [1, 0, 0]]
     assert gof.count_live_neighbors(board, 2, 2) == 0
-    
+
 ##
 
 # Tests for update_board()
 
-def test_update_board_alive_to_dead():
-    board = [[1, 0, 1], [0, 0, 1], [1, 0, 0]]
-    assert gof.update_board(board) == [[0, 1, 0], [0, 0, 0], [0, 0, 0]]
+def test_update_board_all_dead():
+    board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
-def test_update_board_dead_to_alive():
-    board = [[1, 0, 1], [1, 0, 0], [1, 1, 1]]
-    assert gof.update_board(board) == [[0, 1, 0], [1, 0, 1], [1, 1, 0]]
-    
+    assert gof.update_board(board) == [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+def test_update_board_o_alive():
+    board = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
+    assert gof.update_board(board) == [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+def test_update_board_moving_glider():
+    board = [[0, 0, 1, 0], [0, 0, 0, 1], [1, 1, 1, 1], [0, 0, 0, 0]]
+    assert gof.update_board(board) == [
+        [0, 1, 0, 0],
+        [0, 0, 1, 1],
+        [1, 1, 0, 1],
+        [0, 1, 0, 0],
+    ]
+
+def test_update_board_moving_glider():
+    board = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+    assert gof.update_board(board) == [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+
 ##
